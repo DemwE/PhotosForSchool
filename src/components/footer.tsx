@@ -5,14 +5,14 @@ import {Link} from "@nextui-org/link";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="lg:grid lg:px-4 grid-cols-2 bg-gradient-to-r from-cyan-500/90 to-blue-500/20 m-4 rounded-lg border-medium border-black">
+    <footer className="lg:grid lg:px-4 grid-cols-2 md:bg-gradient-to-r from-cyan-500/90 to-blue-500/20 m-4 rounded-lg border-medium border-black">
       <div className="lg:flex flex-col items-start w-full px-4 py-2 mx-auto space-y-3 overflow-hidden">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
             <Link href="/#About" color="foreground">About</Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/#Contact" color="foreground">Contact</Link>
+            <Link href="/#Gallery" color="foreground">Gallery</Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/privacy" color="foreground">Privacy policy</Link>
