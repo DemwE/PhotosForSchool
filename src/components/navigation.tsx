@@ -35,11 +35,11 @@ export default function Navigation() {
               About
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link color="foreground" href="/#Contact" className="font-medium">
-              Contact
-            </Link>
-          </NavbarItem>
+          {/*<NavbarItem>*/}
+          {/*  <Link color="foreground" href="/#Contact" className="font-medium">*/}
+          {/*    Contact*/}
+          {/*  </Link>*/}
+          {/*</NavbarItem>*/}
         </div>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
