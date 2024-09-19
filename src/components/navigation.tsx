@@ -10,7 +10,6 @@ import {
 } from "@nextui-org/navbar";
 import LogoImage from "/public/logo.png";
 import Image from 'next/image'
-import {Button} from "@nextui-org/button";
 import {Link} from "@nextui-org/link";
 import React from "react";
 
@@ -37,7 +36,7 @@ export default function Navigation() {
           </NavbarItem>
           <NavbarItem>
            <Link color="foreground" href="/#Gallery" className="font-medium">
-             Gellery
+             Gallery
            </Link>
           </NavbarItem>
         </div>
@@ -58,8 +57,8 @@ export default function Navigation() {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/#Contact" className="text-xl" onClick={() => setIsMenuOpen(false)}>
-            Contact
+          <Link color="foreground" href="/#Gallery" className="text-xl" onClick={() => setIsMenuOpen(false)}>
+            Gallery
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
