@@ -4,13 +4,16 @@ import fs from 'fs';
 import path from 'path';
 
 export async function getImages() {
-  const imagesFolder = 'public/public';
+  const imagesFolder = 'public/images';
 
   const images = fs.readdirSync(imagesFolder).map((file) => {
     const filePath = path.join(imagesFolder, file);
-    return filePath;
+    const modifiedFilePath = filePath.replace('public/', '');
+    return modifiedFilePath;
   });
 
+  console.log(images)
+  
   return shuffle(images).map((image) => `/${image}`);
 }
 
