@@ -14,7 +14,7 @@ export default function ModalImage({src, className, alt, key}: { src: string, cl
   return (
     <>
       {loaded ? (
-      <div className='relative h-96' onClick={onOpen}>
+      <div className={`relative rounded-xl ${className}`} onClick={onOpen}>
         <Image src={displayImage} alt={alt} className="rounded-xl object-center object-cover" fill={true} />
       </div>
       ) : (
@@ -25,13 +25,9 @@ export default function ModalImage({src, className, alt, key}: { src: string, cl
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size={"full"}>
         <ModalContent>
           <ModalBody>
-            {/* {modalImage ? (
-              <Image src={displayImage} alt={alt} className="rounded-xl object-center object-contain" fill={true} onClick={onOpen} />
-            ) : ( */}
               <Skeleton isLoaded={modalImage} className="h-full w-[98%]" onClick={onOpen}>
                 <Image src={displayImage} alt={alt} className="rounded-xl object-center object-contain" fill={true} onLoad={() => setModalImage(true)} />
               </Skeleton>
-            {/* )} */}
           </ModalBody>
         </ModalContent>
       </Modal>
