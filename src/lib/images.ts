@@ -8,11 +8,10 @@ export async function getImages() {
 
   const images = fs.readdirSync(imagesFolder).map((file) => {
     const filePath = path.join(imagesFolder, file);
-    const modifiedFilePath = filePath.replace('public/', '');
-    return modifiedFilePath;
+    return filePath.replace(/public[\\/]/, '').replace(/\\/g, '/');
   });
 
   console.log(images)
-  
+
   return images.map((image) => `/${image}`);
 }
